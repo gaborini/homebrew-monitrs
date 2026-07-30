@@ -5,10 +5,21 @@ keyboard-first system cockpit for Linux and macOS, built in Rust.
 
 ```sh
 brew tap gaborini/monitrs
+brew trust --formula gaborini/monitrs/monitrs
 brew install monitrs
 ```
 
 `brew upgrade monitrs` afterwards, as usual.
+
+**The `brew trust` line is not optional** on Homebrew 6 and later. A third-party tap is
+ignored until it is trusted, and `brew install` without it fails with *"Refusing to load
+formula from untrusted tap"* — the two-command version of these instructions does not work.
+Trusting the one formula rather than the whole tap (`brew trust gaborini/monitrs`) is what
+Homebrew itself recommends, and it is the narrower grant: it does not extend to anything
+added to this tap later.
+
+What you are trusting is Ruby that runs on your machine during install. This one is
+[thirty lines](Formula/monitrs.rb) and worth reading before you do.
 
 ## Why a tap rather than homebrew-core
 
