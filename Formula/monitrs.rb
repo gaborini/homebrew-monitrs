@@ -7,28 +7,32 @@
 class Monitrs < Formula
   desc "Fast, keyboard-first system cockpit for Linux and macOS"
   homepage "https://github.com/gaborini/monitrs"
-  version "0.2.0"
+  version "1.0.0"
   license any_of: ["MIT", "Apache-2.0"]
 
+  # The URLs interpolate `version` so a release bump touches one version string and
+  # four checksums, and nothing else. Before this, the version also appeared twice in
+  # each of the four URLs -- eight more places to get wrong, which the release
+  # checklist did not mention.
   on_macos do
     on_arm do
-      url "https://github.com/gaborini/monitrs/releases/download/v0.2.0/monitrs-0.2.0-aarch64-apple-darwin.tar.gz"
-      sha256 "590f97123bbf50f7fe711246547d7c27a1008bef178a98d179b94895031a3405"
+      url "https://github.com/gaborini/monitrs/releases/download/v#{version}/monitrs-#{version}-aarch64-apple-darwin.tar.gz"
+      sha256 "659e2c0f936849d60c5af353d65b877bffe0945b380c49aeaed9aaf669609e07"
     end
     on_intel do
-      url "https://github.com/gaborini/monitrs/releases/download/v0.2.0/monitrs-0.2.0-x86_64-apple-darwin.tar.gz"
-      sha256 "75ecd8f427a26fe31fe735f89b9fddb5ab2d1a45d9de60775171ba28b49e584f"
+      url "https://github.com/gaborini/monitrs/releases/download/v#{version}/monitrs-#{version}-x86_64-apple-darwin.tar.gz"
+      sha256 "047c591d11a98f40d918150a73d657f7285fccfb7df352a1a4cbb314e495f95d"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/gaborini/monitrs/releases/download/v0.2.0/monitrs-0.2.0-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "82deba4c0321a5243d4dbd4878c716fc55e823f7085f6376f31e1bd4bf742abb"
+      url "https://github.com/gaborini/monitrs/releases/download/v#{version}/monitrs-#{version}-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "92b9ca821d385d46707883dc3f9585ca370d4e062866efcf01a19b6ab6c5cae2"
     end
     on_intel do
-      url "https://github.com/gaborini/monitrs/releases/download/v0.2.0/monitrs-0.2.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "e65ec1dd226c0d8fcbb38951fe189c625059f1f7c92d0954d1f257a0197889bc"
+      url "https://github.com/gaborini/monitrs/releases/download/v#{version}/monitrs-#{version}-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "1df25ae08ae5a2763d458b0fc5c415166b6e20e380a9adbb756f4f9a55b82e41"
     end
   end
 
