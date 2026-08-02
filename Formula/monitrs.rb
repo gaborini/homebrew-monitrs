@@ -7,7 +7,7 @@
 class Monitrs < Formula
   desc "Fast, keyboard-first system cockpit for Linux and macOS"
   homepage "https://github.com/gaborini/monitrs"
-  version "1.0.0"
+  version "1.0.1"
   license any_of: ["MIT", "Apache-2.0"]
 
   # The URLs interpolate `version` so a release bump touches one version string and
@@ -17,22 +17,22 @@ class Monitrs < Formula
   on_macos do
     on_arm do
       url "https://github.com/gaborini/monitrs/releases/download/v#{version}/monitrs-#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "659e2c0f936849d60c5af353d65b877bffe0945b380c49aeaed9aaf669609e07"
+      sha256 "2a36358e5f86426e394b65a56bed98465193de235818c0a25b60fc7fd104c138"
     end
     on_intel do
       url "https://github.com/gaborini/monitrs/releases/download/v#{version}/monitrs-#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "047c591d11a98f40d918150a73d657f7285fccfb7df352a1a4cbb314e495f95d"
+      sha256 "2b9ce2a424cd7111d19b4c695c62f64de2c6fd0dbe280444a6b4627af5a0546d"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/gaborini/monitrs/releases/download/v#{version}/monitrs-#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "92b9ca821d385d46707883dc3f9585ca370d4e062866efcf01a19b6ab6c5cae2"
+      sha256 "3923f49e68ae0b879f4d6261e08ec2fb199275ba4f4da97661dfe1785ec58b1c"
     end
     on_intel do
       url "https://github.com/gaborini/monitrs/releases/download/v#{version}/monitrs-#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "1df25ae08ae5a2763d458b0fc5c415166b6e20e380a9adbb756f4f9a55b82e41"
+      sha256 "0b330c530f7c6104323193f60564d181f1c563d9b6ff6b9300d4f42341463712"
     end
   end
 
